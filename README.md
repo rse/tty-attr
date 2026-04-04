@@ -10,8 +10,19 @@ manipulating the terminal attributes via `termios` on file descriptor 0
 (`stdin`). It allows to preserve and restore the terminal attributes
 and to set the terminal into raw mode.
 
-https://github.com/microsoft/node-pty/issues/430
+Motivation
+----------
 
+This NPM module is motivated by the problem that programs which
+are spawning TUI tools like `tmux`, `lazygit` or `vim` with
+the help of [node-pty](https://github.com/microsoft/node-pty/)
+experience broken renderings of the TUI tools under Unix-like
+operating systems. The origin of this problem was [already
+determined](https://github.com/microsoft/node-pty/issues/430) in 2020
+and traced back to the usually necessary call to Node.js's setRawMode()
+uses the underlying libuv's `UV_TTY_MODE_RAW` which itself causes the
+problem. This TTY Attr module performs raw `termios` `cfmakeraw()`
+instead which does not cause this problem.
 
 Installation
 ------------
