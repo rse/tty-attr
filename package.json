@@ -1,0 +1,22 @@
+{
+    "name":            "tty-attr",
+    "version":         "0.9.0",
+    "description":     "TTY Attribute Functions",
+    "license":         "MIT",
+    "repository":      { "type": "git", "url": "git+https://github.com/rse/tty-attr.git" },
+    "homepage":        "https://github.com/rse/tty-attr",
+    "bugs":            "https://github.com/rse/tty-attr/issues",
+    "author": {
+        "name":        "Dr. Ralf S. Engelschall",
+        "email":       "rse@engelschall.com",
+        "url":         "http://engelschall.com"
+    },
+    "type":            "module",
+    "main":            "./tty-attr.js",
+    "module":          "./tty-attr.js",
+    "exports": {
+        ".": {
+            "import":  { "types": "./tty-attr.d.ts", "default": "./tty-attr.js" }
+        }
+    }
+}

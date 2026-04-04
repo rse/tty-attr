@@ -1,29 +1,4 @@
 
-TTY Attr
-========
-
-About
------
-
-This is a small Node.js module based on a native C++ part for
-manipulating the terminal attributes via `termios` on file descriptor 0
-(`stdin`). It allows to preserve and restore the terminal attributes
-and to set the terminal into raw mode.
-
-https://github.com/microsoft/node-pty/issues/430
-
-
-Installation
-------------
-
-```shell
-$ npm install tty-attr
-```
-
-Usage Example
--------------
-
-```ts
 import fs          from "node:fs"
 import process     from "node:process"
 
@@ -90,35 +65,4 @@ main().catch((err: unknown) => {
     process.stderr.write(`pass: ERROR: ${err instanceof Error ? err.message : String(err)}\n`)
     process.exit(1)
 })
-```
-
-```sh
-$ npx tsx example.ts ls -l
-$ npx tsx example.ts vim
-$ npx tsx example.ts tmux
-```
-
-License
--------
-
-Copyright &copy; 2026 Dr. Ralf S. Engelschall (http://engelschall.com/)
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
