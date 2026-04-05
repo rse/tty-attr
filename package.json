@@ -1,6 +1,6 @@
 {
     "name":            "tty-attr",
-    "version":         "0.9.2",
+    "version":         "0.9.3",
     "description":     "TTY Attribute Functions",
     "license":         "MIT",
     "repository":      { "type": "git", "url": "git+https://github.com/rse/tty-attr.git" },
