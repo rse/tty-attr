@@ -22,11 +22,9 @@
 **  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-namespace "tty-attr" {
-    export default class TTYAttr {
-        static preserveAttr (): void
-        static setRawMode   (): void
-        static restoreAttr  (): void
-    }
+export default class TTYAttr {
+    static preserveAttr (): void
+    static setRawMode   (): void
+    static restoreAttr  (): void
 }
 
