@@ -16,7 +16,8 @@
     "module":          "./tty-attr.js",
     "exports": {
         ".": {
-            "import":  { "types": "./tty-attr.d.ts", "default": "./tty-attr.js" }
+            "import":   { "types": "./tty-attr.d.ts", "default": "./tty-attr.js" },
+            "require":  { "types": "./tty-attr.d.ts", "default": "./tty-attr.js" }
         }
     }
 }
